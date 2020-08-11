@@ -57,6 +57,7 @@
   text-transform: uppercase;
   color: #957732;
   margin-top: 41px;
+	margin-bottom: 173px;
 }
 /*  */
 .content .swiper_banner{
@@ -140,6 +141,7 @@
   width: 657px;
   vertical-align: top;
   object-fit: contain;
+	background-color: #fff;
 }
 .content .banner3>div{
   box-sizing: border-box;

@@ -7,7 +7,7 @@
   <title></title>
   <link rel="stylesheet" href="../../css/pubilc.css">
   <link rel="stylesheet" href="../../util/swiper/css/swiper.css">
-  <link rel="stylesheet" href="../../css/shoppingCar/home.css">
+  <link rel="stylesheet" href="../../css/ourStory/home.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     		<a href="../homePage/home.html"><img src="../../image/header/logo.png" alt=""></a>
     	</div>
     	<div>
-    		<a href="../ourStory/home.html">OUR STORY</a>
+    		<a href="../ourStory/home.html" class="active">OUR STORY</a>
     		<a href="../contactUs/home.html">CONTACT US</a>
     		<a href="../myAccount/home.html">MY ACCOUNT</a>
     		<a href="../shoppingCar/home.html">
@@ -34,71 +34,50 @@
     	</div>
     </header>
     <div class="content">
-      <!-- 头部信息-->
-      <div class="title">
-				<span>SHOPPING CART</span>
-				<span>2 items</span>
+			<!-- banner图 -->
+			<div class="banner">
+				<p>OUR STORY</p>
 			</div>
-			<!-- items -->
-			<ul>
-				<li class="products_li">
-					<img src="../../image/diamond/konwledge_4.png" >
-					<div class="products_li_detail">
-						<p>223</p>
-						<div class="detail">
-							<span>CARAT:<b>0,24</b></span>
-							<span>COLOUR:<b>M</b></span>
-							<span>CLARITY:<b>VS2</b></span>
-							<span>CLARITY:<b>VS2</b></span>
-							<span>POLISH:<b>G</b></span>
-							<span>SYMMETRY:<b>G</b></span>
-							<span>CERTIFICATE:<b>GIA</b></span>
-							<span>CERTIFICATE NUMBER:<b>47272</b></span>
-						</div>
-						<div class="products_li_price">
-							<img src="../../image/shoppingCar/gia.png" >
-							<span>Click to view certificate</span>
-							<span>€ 220</span>
-						</div>
-					</div>
-				</li>
-				<li class="products_li">
-					<img src="../../image/diamond/konwledge_3.png" >
-					<div class="products_li_detail">
-						<p>223</p>
-						<div class="detail">
-							<span>CARAT:<b>0,24</b></span>
-							<span>COLOUR:<b>M</b></span>
-							<span>CLARITY:<b>VS2</b></span>
-							<span>CLARITY:<b>VS2</b></span>
-							<span>POLISH:<b>G</b></span>
-							<span>SYMMETRY:<b>G</b></span>
-							<span>CERTIFICATE:<b>GIA</b></span>
-							<span>CERTIFICATE NUMBER:<b>47272</b></span>
-						</div>
-						<div class="products_li_price">
-							<img src="../../image/shoppingCar/gia.png" >
-							<span>Click to view certificate</span>
-							<span>€ 220</span>
-						</div>
-					</div>
-				</li>
-			</ul>
 			<!--  -->
-			<div class="add">
-				add additional 
-				<span>DIAMONDS</span>
-				or
-				<span>JEWELRY</span>
+			<div class="menu">
+				<div class="active">INSPIRATION</div>
+				<div>LUMIA</div>
 			</div>
-			<!-- price -->
-			<div class="total">
-				<span>TOTAL =</span>
-				<span>€ 401</span>
-				<span>INCL. VAT</span>
+			<!--  -->
+			<div class="detali">
+				<ul class="nav_list">
+					<li class="active">
+						<span class="title">Brand story</span>
+						<span class="line">WORLD DIAMOND CAPITAL</span>
+						<span class="line" class="line">CHINESE IN ANTWERP</span>
+						<span>LUMIA STORY</span>
+					</li>
+					<li class="">
+						<span class="title">Inspiration</span>
+					</li>
+					<li class="">
+						<span class="title">News</span>
+						<span class="line">DIAMOND RELATED INFORMATION</span>
+						<span class="line">LUMIA DIAMOND INFORMATION</span>
+						<span class="line">ANTWERP EATING & SHOPPING</span>
+						<span>MR. LOVE</span>
+					</li>
+				</ul>
+				<div class="right_content">
+					<ul class="pic_content">
+						<li><span>“THE PAST FIVE YEARS - I AND CHINA”:” CHINESE DREAM” IN THE BELGIAN DIAMOND EXCHANGE</span></li>
+						<li><span>LUMIA KINGDOM DIAMOND COMPANY REGISTRATION CERTIFICATE, DIAMOND STOCK EXCHANGE MEMBERSHIP QUALIFICATION AND BELGIAN MINISTRY OF FINANCE’S BUSINESS TAX CERTIFICATE</span></li>
+						<li><span>LUMIA’S ADVANTAGE</span></li>
+						<li><span>ANTWERP CUT, STANDARD DIAMOND CUTTING PROCESS</span></li>
+						<li><span>WHY IS ANTWERP THE DIAMOND CAPITAL OF THE WORLD?</span></li>
+						<li><span>MEMBER QUALIFICATION OF ANTWERP DIAMOND EXCHANGE</span></li>
+						<li><span>INTO THE WORLD DIAMOND CAPITAL ANTWERP, BELGIUM WHEN THE TRADITIONAL INDUSTRY ENCOUNTERS A NEW ERA</span></li>
+						<li><span>ANCIENT “DIAMOND CAPITAL” TARGETS CHINA’S EMERGING MARKETS</span></li>
+						<li><span>INTO THE DIAMOND STREET OF ANTWERP-REPORTED BY GUANG JUN DAILY REPORTER LIU JUN</span></li>
+					</ul>
+					<span>LOAD MORE</span>
+				</div>
 			</div>
-			<!-- buy -->
-			<div class="commit">BUY ONLINE</div>
     </div>
     <footer class="footer">
       <img src="../../image/header/logo.png" alt="">
@@ -142,26 +121,14 @@
   </div>
 </body>
 <script src="../../util/swiper/js/swiper.min.js"></script>
+<script src="../../util/jquery.js" type="text/javascript" charset="utf-8"></script>
 <script>
-  var swiper = new Swiper('.swiper-container1', {
-    slidesPerView: 3,
-    spaceBetween: 0,
-    loop: true, // 循环模式选项
-    // 如果需要前进后退按钮
-    navigation: {
-      nextEl: '.swiper-button-next1',
-      prevEl: '.swiper-button-prev1',
-    },
-  });
-  var swiper1 = new Swiper('.swiper-container2', {
-    slidesPerView: 3,
-    spaceBetween: 0,
-    // 如果需要前进后退按钮
-    navigation: {
-      nextEl: '.swiper-button-next2',
-      prevEl: '.swiper-button-prev2',
-    },
-  });
+	$(function () {
+		// 菜单折叠
+		$('.nav_list').on('click','.title', function  () {
+			$(this).parents().toggleClass('active')
+		})
+	})
 </script>
 
 </html>

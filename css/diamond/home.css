@@ -89,14 +89,19 @@
 	letter-spacing: 0.15em;
 	display: flex;
 }
-.content .pic li span{
+.content .pic li a{
 	margin: auto;
 }
 .content .pic li:nth-child(odd){
 	background-color:  #C5C4E0;
-		color: #FFFFFF;
 }
 .content .pic li:nth-child(even){
 	background-color:  rgba(149, 119, 50, 0.1);
+	
+}
+.content .pic li:nth-child(odd) a{
+	color: #FFFFFF;
+}
+.content .pic li:nth-child(even) a{
 	color: #957732;
 }

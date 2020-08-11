@@ -22,18 +22,32 @@ select {
 	margin: 0;
 	padding: 0
 }
+*:focus {
+    outline: none;
+}
+input,
+textarea {
+	outline: none;
+}
+
+input {
+	border: none;
+	border-bottom: 0.75px solid #494949;
+	background-color: #FDFAF5;
+	padding: 15px 0;
+}
 
 body {
 	font: 12px "Benton Sans", "微软雅黑";
 	background: #FDFAF5;
 }
 
-a {
-	text-decoration: none
-}
-
-a:hover {
-	text-decoration: underline
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
 }
 
 em {
@@ -76,6 +90,22 @@ p {
 
 .header a {
 	color: #000000;
+}
+
+.header .active {
+	color: #957732;
+	position: relative;
+}
+
+.header .active::after {
+	content: " ";
+	position: absolute;
+	left: 0;
+	top: 20px;
+	width: 100%;
+	height: 1px;
+	background: #957732;
+	transform: scaleY(0.5);
 }
 
 .header>div {
