@@ -85,6 +85,7 @@
 	margin-top: 25px;
 	display: inline-block;
 	width: 33.33%;
+	line-height: 150%;
 }
 .content .products_li .products_li_detail .detail b{
 	font-weight: normal;
@@ -197,6 +198,76 @@
 	color: #494949;
 
 }
+/* 填写相关信息 */
+.content .input_content{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 71px;
+}
+.content .input_content li{
+	width: 475px;
+	margin-bottom: 63px;
+}
+.content .input_content li p{
+	font-size: 30px;
+	line-height: 159.85%;
+	letter-spacing: 0.03em;
+	color: #494949;
+	height: 90px;
+}
+.content .input_content li input{
+	width: 100%;
+	font-weight: bold;
+	font-size: 9px;
+	line-height: 11px;
+	letter-spacing: 0.15em;
+	color: #494949;
+	margin-bottom: 22px;
+}
+.content .card_choose p{
+	font-size: 30px;
+	line-height: 159.85%;
+	letter-spacing: 0.03em;
+	color: #494949;
+	height: 90px;
+}
+.content .card_choose{
+	margin-bottom: 60px;
+}
+.content .card_choose img{
+	padding: 0 18px;
+}
+.content .card_choose .card_choose_radio div:first-child{
+	margin: 0;
+}
+.content .card_choose .card_choose_radio div{
+	margin-left: 54px;
+}
+/*  */
+.content .create{
+	font-size: 11px;
+	line-height: 47px;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	text-align: center;
+	color: #FDFAF5;
+	width: 345px;
+	height: 47px;
+	background: #957732;
+	border-radius: 10px;
+	cursor:pointer;
+}
+/*  */
+.content .tips{
+	font-size: 11px;
+	line-height: 164.5%;
+	color: #494949;
+	margin-top: 23px;
+}
+.content .tips a{
+	color: #957732;
+}
 /*  */
 .content .commit{
 	cursor: pointer;
@@ -213,3 +284,5 @@
 	color: #FDFAF5;
 	text-align: center;
 }
+
+

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=0.5">
+		<script type="text/javascript">
+			var screen_width =  parseInt(window.screen.width); 
+			var screen_scale = screen_width/1440; 
+			// document.write('<meta name="viewport" content="width=1440, initial-scale = '+screen_scale+'">'); 
+		</script>
 		<title></title>
 		<link rel="stylesheet" href="../../css/pubilc.css">
 		<link rel="stylesheet" href="../../util/swiper/css/swiper.css">
 		<link rel="stylesheet" href="../../css/jewellery/home.css">
 	</head>
-
 	<body>
 		<div class="wrapper">
 			<header class="header">
@@ -91,7 +94,7 @@
 				</ul>
 			</div>
 			<!-- 弹框 -->
-			<div class="detail_dialog">
+			<div class="detail_dialog" style="display: none;">
 				<div class="detail_dialog_content">
 					<span class="close">x</span>
 					<div class="product_img">

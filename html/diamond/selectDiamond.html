@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="../../util/swiper/css/swiper.css">
 		<link rel="stylesheet" href="../../css/diamond/selectDiamond.css">
 		<link rel="stylesheet" href="../../util/slideBlock/index.css">
+		<link rel="stylesheet" href="../../util/jqueryRadioCheckbox/css/index.css" />
 	</head>
 
 	<body>
@@ -57,10 +58,10 @@
 				</div>
 				<!--  -->
 				<ul class="selectContent">
-					<li>
+					<li class="choose_between">
 						<div class="title">CHOOSE BETWEEN</div>
 						<div id="">
-							<span>DIAMONDS</span>
+							<span class="active">DIAMONDS</span>
 							<span>FANCY COLOURS</span>
 						</div>
 					</li>
@@ -90,6 +91,26 @@
 							</span>
 						</div>
 					</li>
+					<li class="">
+						<div class="title">FANCY COLOUR</div>
+						<div class="order_img_group">
+							<span>
+								<img src="../../image/diamond/color_1.png" alt="">
+							</span>
+							<span>
+								<img src="../../image/diamond/color_2.png" alt="">
+							</span>
+							<span>
+								<img src="../../image/diamond/color_3.png" alt="">
+							</span>
+							<span>
+								<img src="../../image/diamond/color_4.png" alt="">
+							</span>
+							<span>
+								<img src="../../image/diamond/color_5.png" alt="">
+							</span>
+						</div>
+					</li>
 					<li>
 						<div class="title">CARAT</div>
 						<div id="carat" class="line">
@@ -113,11 +134,16 @@
 					<li>
 						<div class="title">
 							PRICE:
-							<form>
+							<!-- <form>
 								<input type="radio" name="price">$
 								<input type="radio" name="price">€
 								<input type="radio" name="price">元
-							</form>
+							</form> -->
+							<div class="sf-checked priceradio" type="radio" style="margin-left: 24px;">
+								<div class="sf-checked-item" value='1' checked="checked">$</div>
+								<div class="sf-checked-item" value='2'>€</div>
+								<div class="sf-checked-item" value='3'>元</div>
+							</div>
 						</div>
 						<div id="price" class="line">
 						</div>
@@ -129,11 +155,16 @@
 					<li>
 						<div class="title">
 							COLOR:
-							<form>
+							<!-- <form>
 								<input type="radio" name="price">$
 								<input type="radio" name="price">€
 								<input type="radio" name="price">元
-							</form>
+							</form> -->
+							<div class="sf-checked colorradio" type="radio" style="margin-left: 24px;">
+								<div class="sf-checked-item" value='1' checked="checked">$</div>
+								<div class="sf-checked-item" value='2'>€</div>
+								<div class="sf-checked-item" value='3'>元</div>
+							</div>
 						</div>
 						<div id="color" class="line">
 						</div>
@@ -168,11 +199,16 @@
 					<li>
 						<div class="title">
 							CERTIFICATE:
-							<form>
+							<!-- <form>
 								<input type="radio" name="certificate">GIA
 								<input type="radio" name="certificate">IGI
 								<input type="radio" name="certificate">HRD
-							</form>
+							</form> -->
+							<div class="sf-checked certificateradio" type="radio" style="margin-left: 24px;">
+								<div class="sf-checked-item" value='1' checked="checked">GIA</div>
+								<div class="sf-checked-item" value='2'>IGI</div>
+								<div class="sf-checked-item" value='3'>HRD</div>
+							</div>
 						</div>
 						<div class="certificate">
 							<input type="" name="" placeholder="search..." id="" value="" />
@@ -411,6 +447,7 @@
 	</body>
 	<script src="../../util/jquery.js"></script>
 	<script src="../../util/slideBlock/index.js"></script>
+	<script src="../../util/jqueryRadioCheckbox/js/cr.js" type="text/javascript" charset="utf-8"></script>
 	<!-- 初始化滑块 -->
 	<script>
 		var fluorescence = document.getElementById('fluorescence'), 
@@ -512,5 +549,14 @@
 		$('.table_item .show_details').click(function(){
 			$('.detail_dialog').fadeIn()
 		})
+		$(function() {
+			$('.priceradio').sfcheckbox();
+			$('.colorradio').sfcheckbox();
+			$('.certificateradio').sfcheckbox();
+		})
+		//radio 赋值
+		// $('#radio').sfcheckbox('setVal','2');
+		//radio 取值
+		// $('#radio').sfcheckbox('getVal')
 	</script>
 </html>

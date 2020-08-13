@@ -76,18 +76,13 @@ input {
 .content .selectContent .title{
 	display: flex;
 	font-size: 14px;
-	line-height: 17px;
+	/* line-height: 17px; */
 	letter-spacing: 0.15em;
 	color: #957732;
 	padding-bottom: 20px;
 }
-.content .selectContent .title form{
-	display: inline-block;
-	font-size: 9px;
-}
-.content .selectContent .title form input{
-	margin-left: 29px;
-	margin-right: 4px;
+.content .selectContent .title label{
+	padding-left: 8px;
 }
 .content .selectContent .line{
 	height: 20px;
@@ -160,26 +155,14 @@ input {
 	background: #8B8B8B;
 	transform: scaleX(0.25);
 }
-.content .selectContent li:last-child:after {
+/* .content .selectContent li:last-child:after {
 	height: 0;
-}
-.content .selectContent li:nth-child(1),.content .selectContent li:nth-child(2){
+} */
+.content .selectContent .choose_between,.content .selectContent li:nth-child(2){
 	height: 107px;
 	padding-top: 0;
 }
-.content .selectContent li:nth-child(1) div span:nth-child(1){
-	display: inline-block;
-	width: 238px;
-	height: 43px;
-	background: #957732;
-	font-size: 11px;
-	line-height: 43px;
-	text-align: center;
-	letter-spacing: 0.15em;
-	text-transform: uppercase;
-	color: #FDFAF5;
-}
-.content .selectContent li:nth-child(1) div span:nth-child(2){
+.content .selectContent .choose_between div span{
 	display: inline-block;
 	width: 238px;
 	height: 43px;
@@ -190,6 +173,10 @@ input {
 	text-transform: uppercase;
 	color: #957732;
 	border: 0.75px solid #957732;
+}
+.content .selectContent .choose_between div span.active{
+	background: #957732;
+	color: #FDFAF5;
 }
 .content .selectContent li:nth-child(2) span img{
 	display: inline-block;
@@ -224,7 +211,7 @@ input {
 }
 /*  */
 .content .closeOrOpen{
-	width: 181px;
+	width: 230px;
 	height: 47px;
 	border: 1px solid #957732;
 	box-sizing: border-box;
