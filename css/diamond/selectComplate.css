@@ -285,3 +285,51 @@
 	height: 600px;
 	object-fit: scale-down;
 }
+/* 提示框 */
+.detail_tips{
+	position: fixed;
+	width: 433px;
+	height: 178px;
+	right: 50px;
+	top: 10%;
+	background: #FFFFFF;
+	border: 0.75px solid #957732;
+	box-sizing: border-box;
+}
+.detail_tips .close{
+	font-size: 20px;
+	cursor: pointer;
+	padding: 14px;
+	line-height: 14px;
+	color: #957732;
+}
+.detail_tips p{
+	padding: 0 36px;
+	font-size: 12px;
+	line-height: 159.85%;
+	letter-spacing: 0.03em;
+	color: #957732;
+	margin: 204x 0 2px 0;
+}
+.detail_tips p img{
+	width: 14px;
+	height: 20px;
+	object-fit: contain;
+	margin-right: 14px;
+}
+.detail_tips .btn_content{
+	/* padding: 0 50px; */
+	justify-content: space-around;
+	display: flex;
+	font-size: 9px;
+	line-height: 11px;
+	text-transform: uppercase;
+	color: #FDFAF5;
+	margin-top: 20px;
+}
+.detail_tips .btn_content span{
+	padding: 20px 35px;
+	background: #957732;
+	border-radius: 10px;
+	cursor: pointer;
+}

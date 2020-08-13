@@ -14,9 +14,9 @@
   <div class="wrapper">
    <header class="header">
    	<div>
-   		<a href="../diamond/home.html" class="active">Diamond</a>
+   		<a href="../diamond/home.html">Diamond</a>
    		<a href="">ENGAGEMENT RINGS</a>
-   		<a href="../jewellery/home.html">JEWELLERY</a>
+   		<a href="../jewellery/home.html" class="active">JEWELLERY</a>
    	</div>
    	<div class="logo">
    		<a href="../homePage/home.html"><img src="../../image/header/logo.png" alt=""></a>
@@ -42,11 +42,11 @@
 			<!--  -->
 			<div class="menu">
 				<div class="active">
-					<img src="../../image/diamond/menu_1.png">
+					<img src="../../image/diamond/menu_2.png">
 					<p>select your diamond or ...</p>
 				</div>
 				<div>
-					<img src="../../image/diamond/menu_2.png">
+					<img src="../../image/diamond/menu_3.png">
 					<p>... choose your jewel</p>
 				</div>
 				<div>
@@ -120,6 +120,15 @@
 			<div class="close">x</div>
 			<img src="../../image/diamond/konwledge_4.png" alt="">
 		</div>
+		<!-- 提示 -->
+		<div class="detail_tips">
+			<div class="close">x</div>
+			<p><img src="../../image/diamond/complate.png" >the item was added to your shopping cart</p>
+			<div class="btn_content">
+				<span>CONTINUE SHOPPING</span>
+				<span>VIEW CART</span>
+			</div>
+		</div>
     <footer class="footer">
       <img src="../../image/header/logo.png" alt="">
       <p>Hoveniersstraat 35, office 313-315, 2019 Antwerpen — e. info@lumiagem.com — t. +32 689 73 94</p>
@@ -168,6 +177,9 @@
 	})
 	$('.product_img div').click(function(){
 		$('.detail_dialog').fadeIn()
+	})
+	$('.detail_tips .close').click(function() {
+		$('.detail_tips').fadeOut()
 	})
 </script>
 
