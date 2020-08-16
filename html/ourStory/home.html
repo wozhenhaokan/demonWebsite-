@@ -128,6 +128,15 @@
 		$('.nav_list').on('click','.title', function  () {
 			$(this).parents().toggleClass('active')
 		})
+		// 
+		$('.menu').on('click','div',function () {
+			$(this).addClass('active').siblings().removeClass('active')
+		})
+		$('.nav_list').on('click','span',function () {
+			let index = $(this).index()
+			if(index == 0){return false}
+			window.location.href = './detail_'+index+'.html'
+		})
 	})
 </script>
 

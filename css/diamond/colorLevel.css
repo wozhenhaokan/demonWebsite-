@@ -32,7 +32,7 @@
 	justify-content: space-between;
 	margin-top: 20px;
 }
-.content .menu>div{
+.content .menu>div>a{
 	width: 424px;
 	height: 132px;
 	border: 0.75px solid #957732;
@@ -47,13 +47,13 @@
 	background: #C5C4E0;
 	border: none;
 }
-.content .menu>div img{
+.content .menu>div>a img{
 	margin-top: 32px;
 	width: 34px;
 	height: 37px;
 	object-fit: contain;
 }
-.content .menu>div p{
+.content .menu>div>a p{
 	margin-top: 9px;
 	font-size: 16px;
 	line-height: 159.85%;

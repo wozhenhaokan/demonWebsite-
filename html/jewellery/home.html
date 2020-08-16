@@ -185,24 +185,25 @@
 	</body>
 
 	<script src="../../util/jquery.js"></script>
-	<script src="../../util/swiper/js/swiper.min.js"></script>
+	<script src="../../util/swiper/js/swiper.js"></script>
 	<script>
-		var swiper = new Swiper('.swiper-container', {
-			slidesPerView: 1,
-			spaceBetween: 0,
-			loop: true, // 循环模式选项
-			// 如果需要前进后退按钮
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-		});
+		
 
 		$('.detail_dialog .close').click(function() {
 			$('.detail_dialog').fadeOut()
 		})
 		$('.products li').click(function() {
 			$('.detail_dialog').fadeIn()
+			var swiper = new Swiper('.swiper-container', {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				loop: true, // 循环模式选项
+				// 如果需要前进后退按钮
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
 		})
 	</script>
 

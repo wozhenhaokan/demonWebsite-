@@ -40,18 +40,28 @@
 				<span id="">WATCH VIDEO</span>
 			</div>
 			<!--  -->
-			<div class="menu">
-				<div class="active">
-					<img src="../../image/diamond/menu_2.png">
-					<p>select your diamond or ...</p>
-				</div>
-				<div>
-					<img src="../../image/diamond/menu_3.png">
-					<p>... choose your jewel</p>
-				</div>
-				<div>
-					<img src="../../image/diamond/complate.png">
-					<p>complete customisation</p>
+			<div class="menu swiper-container">
+				<div class="swiper-wrapper">
+					<a href="diamondKnowledge.html" class=" swiper-slide">
+						<img src="../../image/diamond/menu_1.png" >
+						<p>how to select your perfect diamond</p>
+					</a>
+					<a href="selectDiamond.html" class="swiper-slide">
+						<img src="../../image/diamond/menu_2.png" >
+						<p>select your diamond</p>
+					</a>
+					<a href="../jewellery/chooseJewel.html" class="swiper-slide">
+						<img src="../../image/diamond/menu_3.png" >
+						<p>... choose your jewel</p>
+					</a>
+					<a href="getInformation.html" class="swiper-slide">
+						<img src="../../image/diamond/menu_4.png" >
+						<p>get more information</p>
+					</a>
+					<a href="selectComplate.html" class="active swiper-slide">
+						<img src="../../image/diamond/complate.png" >
+						<p>complete customisation</p>
+					</a>
 				</div>
 			</div>
 			<!--商品 -->
@@ -111,7 +121,7 @@
 			</div>
 			<!-- buy -->
 			<div class="commit">
-				<span>ADD TO SHOPPING CART</span>
+				<span class="addCar">ADD TO SHOPPING CART</span>
 				<span>MAKE ONLINe/PHYSICAL APPOINTMENT</span>
 			</div>
     </div>
@@ -171,6 +181,7 @@
   </div>
 </body>
 <script src="../../util/jquery.js"></script>
+<script src="../../util/swiper/js/swiper.js" type="text/javascript" charset="utf-8"></script>
 <script>
 	$('.detail_dialog .close').click(function(){
 		$('.detail_dialog').fadeOut()
@@ -180,6 +191,18 @@
 	})
 	$('.detail_tips .close').click(function() {
 		$('.detail_tips').fadeOut()
+	})
+	$('.addCar').click(function() {
+		window.location.href = '../shoppingCar/home.html'
+	})
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		spaceBetween: 20,
+		initialSlide:2,
+		loop: false, // 循环模式选项
+	});
+	$('.menu').on('click','a',function () {
+		$(this).addClass('active').siblings().removeClass('active')
 	})
 </script>
 

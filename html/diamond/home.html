@@ -40,18 +40,28 @@
 				<span id="">WATCH VIDEO</span>
 			</div>
 			<!--  -->
-			<div class="menu">
-				<div class="active">
-					<img src="../../image/diamond/menu_1.png" >
-					<p>how to select your perfect diamond</p>
-				</div>
-				<div>
-					<img src="../../image/diamond/menu_2.png" >
-					<p>select your diamond or ...</p>
-				</div>
-				<div>
-					<img src="../../image/diamond/menu_3.png" >
-					<p>... choose your jewel</p>
+			<div class="menu swiper-container">
+				<div class="swiper-wrapper">
+					<a href="diamondKnowledge.html" class="active swiper-slide">
+						<img src="../../image/diamond/menu_1.png" >
+						<p>how to select your perfect diamond</p>
+					</a>
+					<a href="selectDiamond.html" class="swiper-slide">
+						<img src="../../image/diamond/menu_2.png" >
+						<p>select your diamond</p>
+					</a>
+					<a href="../jewellery/chooseJewel.html" class="swiper-slide">
+						<img src="../../image/diamond/menu_3.png" >
+						<p>... choose your jewel</p>
+					</a>
+					<a href="getInformation.html" class="swiper-slide">
+						<img src="../../image/diamond/menu_4.png" >
+						<p>get more information</p>
+					</a>
+					<a href="selectComplate.html" class="swiper-slide">
+						<img src="../../image/diamond/complate.png" >
+						<p>complete customisation</p>
+					</a>
 				</div>
 			</div>
       <!-- 标语 -->
@@ -60,12 +70,12 @@
       </div>
 			<ul class="pic">
 				<li><a href="./diamondKnowledge.html">DIAMOND</br> KNOWLEDGE</a></li>
-				<li><a href="./selectDiamond.html">CARAT</a></li>
-				<li><a href="./colorLevel.html">COLOR LEVEL</a></li>
-				<li><a href="">CLARITY</a></li>
-				<li><a href="">CERTIFICATE</br> DIFFERENCE</a></li>
-				<li><a href="">CUT</a></li>
-				<li><a href="">FLUORESCENCE</a></li>
+				<li><a href="./selectDiamond.html"></br>CARAT</a></li>
+				<li><a href="./colorLevel.html"></br>COLOR LEVEL</a></li>
+				<li><a href="./selectComplate.html"></br>CLARITY</a></li>
+				<li><a href="./getInformation.html">CERTIFICATE</br> DIFFERENCE</a></li>
+				<li><a href=""></br>CUT</a></li>
+				<li><a href=""></br>FLUORESCENCE</a></li>
 			</ul>
     </div>
     <footer class="footer">
@@ -109,27 +119,17 @@
     </footer>
   </div>
 </body>
+<script src="../../util/jquery.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../util/swiper/js/swiper.min.js"></script>
 <script>
-  var swiper = new Swiper('.swiper-container1', {
-    slidesPerView: 3,
-    spaceBetween: 0,
-    loop: true, // 循环模式选项
-    // 如果需要前进后退按钮
-    navigation: {
-      nextEl: '.swiper-button-next1',
-      prevEl: '.swiper-button-prev1',
-    },
+  var swiper = new Swiper('.swiper-container', {
+  	slidesPerView: 3,
+  	spaceBetween: 20,
+  	loop: false, // 循环模式选项
   });
-  var swiper1 = new Swiper('.swiper-container2', {
-    slidesPerView: 3,
-    spaceBetween: 0,
-    // 如果需要前进后退按钮
-    navigation: {
-      nextEl: '.swiper-button-next2',
-      prevEl: '.swiper-button-prev2',
-    },
-  });
+  $('.menu').on('click','a',function () {
+  	$(this).addClass('active').siblings().removeClass('active')
+  })
 </script>
 
 </html>

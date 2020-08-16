@@ -42,30 +42,84 @@
 					<span id="">WATCH VIDEO</span>
 				</div>
 				<!--  -->
-				<div class="menu">
-					<div class="active">
-						<img src="../../image/diamond/menu_1.png">
-						<p>how to select your perfect diamond</p>
-					</div>
-					<div>
-						<img src="../../image/diamond/menu_2.png">
-						<p>select your diamond or ...</p>
-					</div>
-					<div>
-						<img src="../../image/diamond/menu_3.png">
-						<p>... choose your jewel</p>
+				<div class="menu swiper-container">
+					<div class="swiper-wrapper">
+						<a href="diamondKnowledge.html" class="swiper-slide">
+							<img src="../../image/diamond/menu_1.png" >
+							<p>how to select your perfect diamond</p>
+						</a>
+						<a href="selectDiamond.html" class="active swiper-slide">
+							<img src="../../image/diamond/menu_2.png" >
+							<p>select your diamond</p>
+						</a>
+						<a href="../jewellery/chooseJewel.html" class="swiper-slide">
+							<img src="../../image/diamond/menu_3.png" >
+							<p>... choose your jewel</p>
+						</a>
+						<a href="getInformation.html" class="swiper-slide">
+							<img src="../../image/diamond/menu_4.png" >
+							<p>get more information</p>
+						</a>
+						<a href="selectComplate.html" class="swiper-slide">
+							<img src="../../image/diamond/complate.png" >
+							<p>complete customisation</p>
+						</a>
 					</div>
 				</div>
 				<!--  -->
 				<ul class="selectContent">
 					<li class="choose_between">
 						<div class="title">CHOOSE BETWEEN</div>
-						<div id="">
+						<div id="" class="changeFANCY">
 							<span class="active">DIAMONDS</span>
 							<span>FANCY COLOURS</span>
 						</div>
 					</li>
-					<li>
+					<li class="second_li" style="display: none;">
+						<div class="title">FANCY COLOUR</div>
+						<div class="order_img_group">
+							<span>
+								<img src="../../image/diamond/color_1.png" alt="">
+							</span>
+							<span>
+								<img src="../../image/diamond/color_2.png" alt="">
+							</span>
+							<span>
+								<img src="../../image/diamond/color_3.png" alt="">
+							</span>
+							<span>
+								<img src="../../image/diamond/color_4.png" alt="">
+							</span>
+							<span>
+								<img src="../../image/diamond/color_5.png" alt="">
+							</span>
+						</div>
+					</li>
+					<li style="display: none;">
+						<div class="title">
+							COLOUR INTENSITY:
+							<!-- <form>
+								<input type="radio" name="price">$
+								<input type="radio" name="price">€
+								<input type="radio" name="price">元
+							</form> -->
+							<div class="sf-checked priceradio" type="radio" style="margin-left: 24px;">
+								<div class="sf-checked-item" value='1' checked="checked">$</div>
+								<div class="sf-checked-item" value='2'>€</div>
+								<div class="sf-checked-item" value='3'>元</div>
+							</div>
+						</div>
+						<div id="colourintensity" class="line">
+						</div>
+						<div class="items_line">
+							<span>FANCY LIGHT</span>
+							<span>FANCY</span>
+							<span>FANCY INTENSE</span>
+							<span>FANCY DEEP</span>
+							<span>FANCY VIVIT</span>
+						</div>
+					</li>
+					<li class="fourth_li">
 						<div class="title">SELECT A SHAPE</div>
 						<div class="order_img_group">
 							<span>
@@ -91,26 +145,7 @@
 							</span>
 						</div>
 					</li>
-					<li class="">
-						<div class="title">FANCY COLOUR</div>
-						<div class="order_img_group">
-							<span>
-								<img src="../../image/diamond/color_1.png" alt="">
-							</span>
-							<span>
-								<img src="../../image/diamond/color_2.png" alt="">
-							</span>
-							<span>
-								<img src="../../image/diamond/color_3.png" alt="">
-							</span>
-							<span>
-								<img src="../../image/diamond/color_4.png" alt="">
-							</span>
-							<span>
-								<img src="../../image/diamond/color_5.png" alt="">
-							</span>
-						</div>
-					</li>
+					
 					<li>
 						<div class="title">CARAT</div>
 						<div id="carat" class="line">
@@ -131,6 +166,7 @@
 							<span>FAIR</span>
 						</div>
 					</li>
+					
 					<li>
 						<div class="title">
 							PRICE:
@@ -251,7 +287,7 @@
 					</li>
 				</ul>
 				<!--  -->
-				<div class="closeOrOpen">HIDE EXTRA OPTIONS</div>
+				<div class="closeOrOpen">SHOW MORE OPTIONS</div>
 				<div class="total">32 <span>items found</span></div>
 				<!-- 表格 -->
 				<ul class="table">
@@ -446,6 +482,7 @@
 		</div>
 	</body>
 	<script src="../../util/jquery.js"></script>
+	<script src="../../util/swiper/js/swiper.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../../util/slideBlock/index.js"></script>
 	<script src="../../util/jqueryRadioCheckbox/js/cr.js" type="text/javascript" charset="utf-8"></script>
 	<!-- 初始化滑块 -->
@@ -458,6 +495,7 @@
 				price = document.getElementById('price'),
 				color = document.getElementById('color'),
 				clarity = document.getElementById('clarity')
+				colourintensity = document.getElementById('colourintensity')
 		noUiSlider.create(fluorescence, {
 			start: [0, 100],
 			connect: true,
@@ -538,6 +576,16 @@
 				'max': 100
 			}
 		});
+		noUiSlider.create(colourintensity, {
+			start: [0, 100],
+			connect: true,
+			// serialization:0,//小数点位数
+			step: 1,
+			range: {
+				'min': 0,
+				'max': 100
+			}
+		});
 		clarity.noUiSlider.on('update', function(values, handle, unencoded, tap, positions) {
 			console.log(values)
 		});
@@ -554,9 +602,34 @@
 			$('.colorradio').sfcheckbox();
 			$('.certificateradio').sfcheckbox();
 		})
+		// 设置closeOrOpen
+		$('.closeOrOpen').click(function(){
+			if($(this).text() == 'HIDE EXTRA OPTIONS'){
+				$(this).text('SHOW MORE OPTIONS')
+				$('.selectContent').css('height','508px')
+			}else{
+				$(this).text('HIDE EXTRA OPTIONS')
+				$('.selectContent').css('height','auto')
+			}
+		})
+		//
+		$('.changeFANCY').on('click','span',function () {
+			$(this).addClass('active').siblings().removeClass('active')
+			$('.selectContent li:eq(1)').toggle()
+			$('.selectContent li:eq(2)').toggle()
+		})
 		//radio 赋值
 		// $('#radio').sfcheckbox('setVal','2');
 		//radio 取值
 		// $('#radio').sfcheckbox('getVal')
+		var swiper = new Swiper('.swiper-container', {
+			slidesPerView: 3,
+			spaceBetween: 20,
+			initialSlide:1,
+			loop: false, // 循环模式选项
+		});
+		$('.menu').on('click','a',function () {
+			$(this).addClass('active').siblings().removeClass('active')
+		})
 	</script>
 </html>

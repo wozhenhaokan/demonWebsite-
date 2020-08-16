@@ -35,7 +35,7 @@ input {
 	justify-content: space-between;
 	margin-top: 20px;
 }
-.content .menu>div{
+.content .menu>div>a{
 	width: 424px;
 	height: 132px;
 	border: 0.75px solid #957732;
@@ -50,13 +50,13 @@ input {
 	background: #C5C4E0;
 	border: none;
 }
-.content .menu>div img{
+.content .menu>div>a img{
 	margin-top: 32px;
 	width: 34px;
 	height: 37px;
 	object-fit: contain;
 }
-.content .menu>div p{
+.content .menu>div>a p{
 	margin-top: 9px;
 	font-size: 16px;
 	line-height: 159.85%;
@@ -72,6 +72,8 @@ input {
 	width: 1100px;
 	margin: 0 auto;
 	margin-top: 80px;
+	height: 508px;
+	overflow: hidden;
 }
 .content .selectContent .title{
 	display: flex;
@@ -86,7 +88,8 @@ input {
 }
 .content .selectContent .line{
 	height: 20px;
-	width: 460px;
+	width: 470px;
+	padding-left: 10px;
 }
 .content .selectContent .numArr{
 	width: 486px;
@@ -149,19 +152,22 @@ input {
 	content: " ";
 	position: absolute;
 	right: 0;
-	top: 0;
+	bottom: 0;
 	width: 1px;
 	height: 100%;
 	background: #8B8B8B;
 	transform: scaleX(0.25);
 }
+.content .selectContent li.choose_between:before{
+	height: 80%;
+}
 /* .content .selectContent li:last-child:after {
 	height: 0;
 } */
-.content .selectContent .choose_between,.content .selectContent li:nth-child(2){
+/* .content .selectContent .choose_between,.content .selectContent .second_li{
 	height: 107px;
 	padding-top: 0;
-}
+} */
 .content .selectContent .choose_between div span{
 	display: inline-block;
 	width: 238px;
@@ -173,21 +179,24 @@ input {
 	text-transform: uppercase;
 	color: #957732;
 	border: 0.75px solid #957732;
+	cursor: pointer;
 }
 .content .selectContent .choose_between div span.active{
 	background: #957732;
 	color: #FDFAF5;
 }
-.content .selectContent li:nth-child(2) span img{
+.content .selectContent .fourth_li span img{
 	display: inline-block;
 	margin-right: 36px;
+	cursor: pointer;
 }
-.content .selectContent li:nth-child(2) span:last-child img{
-		margin-right: 0;
+.content .selectContent .fourth_li span:last-child img{
+	margin-right: 0;
 }
-.content .selectContent li:nth-child(3) img{
+.content .selectContent .second_li img{
 	display: inline-block;
 	margin-right: 40px;
+	cursor: pointer;
 }
 .content .selectContent .certificate {
 	display: flex;
@@ -222,6 +231,7 @@ input {
 	letter-spacing: 0.15em;
 	text-transform: uppercase;
 	color: #957732;
+	cursor: pointer;
 }
 /*  */
 .content .total{

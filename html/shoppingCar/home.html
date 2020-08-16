@@ -141,27 +141,12 @@
     </footer>
   </div>
 </body>
+<script src="../../util/jquery.js"></script>
 <script src="../../util/swiper/js/swiper.min.js"></script>
 <script>
-  var swiper = new Swiper('.swiper-container1', {
-    slidesPerView: 3,
-    spaceBetween: 0,
-    loop: true, // 循环模式选项
-    // 如果需要前进后退按钮
-    navigation: {
-      nextEl: '.swiper-button-next1',
-      prevEl: '.swiper-button-prev1',
-    },
-  });
-  var swiper1 = new Swiper('.swiper-container2', {
-    slidesPerView: 3,
-    spaceBetween: 0,
-    // 如果需要前进后退按钮
-    navigation: {
-      nextEl: '.swiper-button-next2',
-      prevEl: '.swiper-button-prev2',
-    },
-  });
+  $('.commit').click(function () {
+  	window.location.href = './buyOnline.html'
+  })
 </script>
 
 </html>
