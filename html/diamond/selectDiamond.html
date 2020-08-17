@@ -41,6 +41,7 @@
 				<div class="banner">
 					<p>CHOOSE >YOUR DIAMOND</p>
 					<span id="">WATCH VIDEO</span>
+					
 				</div>
 				<!--  -->
 				<div class="menu swiper-container">
@@ -190,7 +191,7 @@
 						</div>
 					</li>
 					<li>
-						<div class="title">
+						<div class="title color">
 							COLOR:
 							<!-- <form>
 								<input type="radio" name="price">$
@@ -488,6 +489,7 @@
 	<script src="../../util/slideBlock/index.js"></script>
 	<script src="../../util/jqueryRadioCheckbox/js/cr.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../../util/Page/js/jquery.z-pager.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../util/toolTips/index.js" type="text/javascript" charset="utf-8"></script>
 	<!-- 初始化滑块 -->
 	<script>
 		var fluorescence = document.getElementById('fluorescence'), 
@@ -647,5 +649,7 @@
 			*/
 			console.log("当前页码数：" + currentPage);
 		}
+		var tooltips = new tooltip(".fourth_li",'Adjust all filter to your needs','top');
+		var tooltips = new tooltip(".color",'The color of a diamond ...','opacity');
 	</script>
 </html>
