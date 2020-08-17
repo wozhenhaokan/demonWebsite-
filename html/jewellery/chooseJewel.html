@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="../../css/jewellery/chooseJewel.css">
 		<link rel="stylesheet" href="../../util/slideBlock/index.css">
 		<link rel="stylesheet" href="../../util/jqueryRadioCheckbox/css/index.css" />
+		<link rel="stylesheet" href="../../util/Page/css/page.css" />
 	</head>
 	<body>
 		<div class="wrapper">
@@ -43,23 +44,23 @@
 				<div class="menu swiper-container swiper-container1">
 					<div class="swiper-wrapper">
 						<a href="../diamond/diamondKnowledge.html" class=" swiper-slide">
-							<img src="../../image/diamond/menu_1.png" >
+							<img src="../../image/diamond/menu_1.png">
 							<p>how to select your perfect diamond</p>
 						</a>
 						<a href="../diamond/selectDiamond.html" class="swiper-slide">
-							<img src="../../image/diamond/menu_2.png" >
+							<img src="../../image/diamond/menu_2.png">
 							<p>select your diamond</p>
 						</a>
 						<a href="chooseJewel.html" class="active swiper-slide">
-							<img src="../../image/diamond/menu_3.png" >
+							<img src="../../image/diamond/menu_3.png">
 							<p>... choose your jewel</p>
 						</a>
 						<a href="../diamond/getInformation.html" class="swiper-slide">
-							<img src="../../image/diamond/menu_4.png" >
+							<img src="../../image/diamond/menu_4.png">
 							<p>get more information</p>
 						</a>
 						<a href="../diamond/selectComplate.html" class="swiper-slide">
-							<img src="../../image/diamond/complate.png" >
+							<img src="../../image/diamond/complate.png">
 							<p>complete customisation</p>
 						</a>
 					</div>
@@ -188,6 +189,7 @@
 							 alt=""></a>
 					</li>
 				</ul>
+				<div id="pager" class="pager clearfix"></div>
 			</div>
 			<!-- 弹框 -->
 			<div class="detail_dialog" style="display: none;">
@@ -239,7 +241,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<footer class="footer">
 				<img src="../../image/header/logo.png" alt="">
 				<p>Hoveniersstraat 35, office 313-315, 2019 Antwerpen — e. info@lumiagem.com — t. +32 689 73 94</p>
@@ -285,52 +287,62 @@
 	<script src="../../util/slideBlock/index.js"></script>
 	<script src="../../util/jqueryRadioCheckbox/js/cr.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../../util/swiper/js/swiper.js"></script>
+	<script src="../../util/Page/js/jquery.z-pager.js" type="text/javascript" charset="utf-8"></script>
 	<script>
-		$(function() {
-			$('.detail_dialog .close').click(function() {
-				$('.detail_dialog').fadeOut()
-			})
-			$('.changeFANCY').on('click','span',function () {
-				$(this).addClass('active').siblings().removeClass('active')
-			})
-			$('.products li').click(function() {
-				$('.detail_dialog').fadeIn()
-				//
-				var swiper2 = new Swiper('.swiper-container2', {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					loop: true, // 循环模式选项
-					// 如果需要前进后退按钮
-					navigation: {
-						nextEl: '.swiper-button-next',
-						prevEl: '.swiper-button-prev',
-					},
-				});
-			})
-			
-			var swiper1 = new Swiper('.swiper-container1', {
-				slidesPerView: 3,
-				spaceBetween: 20,
-				initialSlide:1,
-				loop: false, // 循环模式选项
-			});
-			$('.menu').on('click','a',function () {
-				$(this).addClass('active').siblings().removeClass('active')
-			})
-			$('.priceradio').sfcheckbox();
-			var price = document.getElementById('price')
-			noUiSlider.create(price, {
-				start: [0, 100],
-				connect: true,
-				// serialization:0,//小数点位数
-				step: 1,
-				range: {
-					'min': 0,
-					'max': 100
-				}
-			});
-			
+		$('.detail_dialog .close').click(function() {
+			$('.detail_dialog').fadeOut()
 		})
+		$('.changeFANCY').on('click', 'span', function() {
+			$(this).addClass('active').siblings().removeClass('active')
+		})
+		$("#pager").zPager({
+			totalData: 50,
+			btnShow: true,
+			ajaxSetData: false
+		});
+
+		function currentPage(currentPage) {
+			/*
+				触发页码数位置： Page/js/jquery.z-pager.js 64行
+			*/
+			console.log("当前页码数：" + currentPage);
+		}
+		$('.products li').click(function() {
+			$('.detail_dialog').fadeIn()
+			//
+			var swiper2 = new Swiper('.swiper-container2', {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				loop: true, // 循环模式选项
+				// 如果需要前进后退按钮
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+		})
+
+		var swiper1 = new Swiper('.swiper-container1', {
+			slidesPerView: 3,
+			spaceBetween: 20,
+			initialSlide: 1,
+			loop: false, // 循环模式选项
+		});
+		$('.menu').on('click', 'a', function() {
+			$(this).addClass('active').siblings().removeClass('active')
+		})
+		$('.priceradio').sfcheckbox();
+		var price = document.getElementById('price')
+		noUiSlider.create(price, {
+			start: [0, 100],
+			connect: true,
+			// serialization:0,//小数点位数
+			step: 1,
+			range: {
+				'min': 0,
+				'max': 100
+			}
+		});
 	</script>
 
 </html>
