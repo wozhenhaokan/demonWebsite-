@@ -143,10 +143,14 @@
 </body>
 <script src="../../util/jquery.js"></script>
 <script src="../../util/swiper/js/swiper.min.js"></script>
+	<script src="../../util/toolTips/index.js" type="text/javascript" charset="utf-8"></script>
 <script>
   $('.commit').click(function () {
   	window.location.href = './buyOnline.html'
   })
+	var tooltips = new tooltip(".products_li",'Review the items in your shopping cart','top');
+	var tooltips = new tooltip(".add",'Add extra items if necessary','top');
+	var tooltips = new tooltip(".commit",'Buy your items online ','top');
 </script>
 
 </html>

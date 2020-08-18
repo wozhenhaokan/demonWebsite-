@@ -288,6 +288,7 @@
 	<script src="../../util/jqueryRadioCheckbox/js/cr.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../../util/swiper/js/swiper.js"></script>
 	<script src="../../util/Page/js/jquery.z-pager.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../util/toolTips/index.js" type="text/javascript" charset="utf-8"></script>
 	<script>
 		$('.detail_dialog .close').click(function() {
 			$('.detail_dialog').fadeOut()
@@ -300,7 +301,8 @@
 			btnShow: true,
 			ajaxSetData: false
 		});
-
+		var tooltips = new tooltip(".order_img_group",'Adjust all filter to your needs','top');
+		var tooltips = new tooltip(".products li",'Click to find out more information & complete the customization','top');
 		function currentPage(currentPage) {
 			/*
 				触发页码数位置： Page/js/jquery.z-pager.js 64行

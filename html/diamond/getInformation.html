@@ -54,7 +54,7 @@
 							<img src="../../image/diamond/menu_3.png" >
 							<p>... choose your jewel</p>
 						</a>
-						<a href="getInformation.html" class="active swiper-slide">
+						<a href="getInformation.html" class="active swiper-slide getInformation">
 							<img src="../../image/diamond/menu_4.png" >
 							<p>get more information</p>
 						</a>
@@ -120,7 +120,9 @@
 	</body>
 	<script src="../../util/jquery.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../../util/swiper/js/swiper.min.js"></script>
+	<script src="../../util/toolTips/index.js" type="text/javascript" charset="utf-8"></script>
 	<script>
+		var tooltips = new tooltip(".getInformation",'Don’t hesistate to call us if you need any help','top');
 		var swiper = new Swiper('.swiper-container', {
 			slidesPerView: 3,
 			spaceBetween: 20,
